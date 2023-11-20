@@ -6,7 +6,10 @@ Lojas Suportadas:
 - Kabum
 - Pichau
 
-Para rodar baixe as dependências com:
+Para rodar clone o repositório com:
+git clone https://github.com/pedrohcs8/ProcuraAi.git
+
+Baixe as dependências com:
 pip install -r requirements.txt
 
 E rode com:
