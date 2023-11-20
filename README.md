@@ -1,6 +1,7 @@
 Este é um simples projeto destinado a facilitar a busca por produtos nas principais lojas de informática Brasileiras
 
 SOMENTE MAC-OS E LINUX
+NECESSÁRIO FIREFOX INSTALADO
 
 Lojas Suportadas:
 - Mercado Livre
