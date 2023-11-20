@@ -7,13 +7,13 @@ Lojas Suportadas:
 - Pichau
 
 Para rodar clone o repositório com:
-git clone https://github.com/pedrohcs8/ProcuraAi.git
+`git clone https://github.com/pedrohcs8/ProcuraAi.git`
 
 Baixe as dependências com:
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 E rode com:
-python3 main.py
+`python3 main.py`
 
 Um projeto produzido por pedrohcs8
 
