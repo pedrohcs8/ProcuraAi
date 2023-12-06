@@ -115,17 +115,19 @@ def produtosPichau(useStrictTerm, strictTerm):
 
     i = 0
     for produto in produtos_pichau:
-        tituloProduto = produto.find('h2', 'MuiTypography-root jss232 jss233 MuiTypography-h6').text
+        tituloProduto = produto.find('h2', "MuiTypography-root jss80 jss81 MuiTypography-h6").text
 
         if useStrictTerm:
             if strictTerm not in tituloProduto:
                     continue
 
-        linkProduto = 'https://pichau.com.br/' + produto.find('a', 'jss166')['href']
-        precoProdutoBruto = produto.find('div', 'jss235').text
-        precoProdutoSelecionado = re.findall(r'\d+', precoProdutoBruto)
+        if produto.find('a', 'jss12')['href']:
+            linkBruto = produto.find('a', 'jss12')['href']
+        else:
+            linkBruto = produto.find('a', 'jss16')['href']
 
-        precoProduto = int(''.join(precoProdutoSelecionado[:2]))
+        linkProduto = 'https://pichau.com.br/' + linkBruto
+        precoProduto = produto.find('div', 'jss110').text
 
         list_pichau.append(list([tituloProduto, precoProduto, linkProduto]))
         i = i + 1
