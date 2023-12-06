@@ -49,7 +49,6 @@ def produtosMl(useStrictTerm, strictTerm):
                     continue
 
         linkProduto = produto_ml.find('a', 'ui-search-item__group__element ui-search-link__title-card ui-search-link')['href']
-        print(linkProduto)
         precoProduto = int(produto_ml.find('span', 'andes-money-amount__fraction').text.replace('.', ''))
 
         list_ml.append(list([tituloProduto, precoProduto, linkProduto]))
