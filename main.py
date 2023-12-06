@@ -42,16 +42,15 @@ def produtosMl(useStrictTerm, strictTerm):
         return "Produto não encontrado"
 
     for produto_ml in produtos_ml:
-        info_produto = produto_ml.find('div', attrs={'div', 'andes-card ui-search-result ui-search-result--core andes-card--flat andes-card--padding-16 andes-card--animated'})
-
-        tituloProduto = info_produto.find('h2', 'ui-search-item__title').text
+        tituloProduto = produto_ml.find('h2', 'ui-search-item__title').text
 
         if useStrictTerm:
             if strictTerm not in tituloProduto:
                     continue
 
-        linkProduto = info_produto.find('a', 'ui-search-item__group__element ui-search-link')['href']
-        precoProduto = int(info_produto.find('span', 'andes-money-amount__fraction').text.replace('.', ''))
+        linkProduto = produto_ml.find('a', 'ui-search-item__group__element ui-search-link__title-card ui-search-link')['href']
+        print(linkProduto)
+        precoProduto = int(produto_ml.find('span', 'andes-money-amount__fraction').text.replace('.', ''))
 
         list_ml.append(list([tituloProduto, precoProduto, linkProduto]))
 
