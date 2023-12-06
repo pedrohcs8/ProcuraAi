@@ -121,7 +121,7 @@ def produtosPichau(useStrictTerm, strictTerm):
             if strictTerm not in tituloProduto:
                     continue
 
-        if produto.find('a', 'jss12')['href']:
+        if produto.find('a', 'jss12') is not None:
             linkBruto = produto.find('a', 'jss12')['href']
         else:
             linkBruto = produto.find('a', 'jss16')['href']
